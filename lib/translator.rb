@@ -7,12 +7,9 @@ def load_library
 end
 
 def get_japanese_emoticon
-  # code goes here
+  dictionary = load_library
 end
 
 def get_english_meaning
-  # code goes here
+  dictionary = load_library
 end
-
-d = load_library
-puts d
