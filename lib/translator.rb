@@ -14,7 +14,10 @@ def load_library(filepath)
   dictionary = YAML.load_file(filepath)
   emoticons = dictionary.map { |emotion| emotion[1] }
   get_emoticon = emoticons.to_h
-    
+  japanese_first = emoticons.map {|emoticon| emoticon.reverse}
+  get_meaning = japanese_first.to_h
+
+  {"get_meaning" => get_meaning, "get_emoticon" => get_emoticon}
 end
 
 def get_japanese_emoticon
