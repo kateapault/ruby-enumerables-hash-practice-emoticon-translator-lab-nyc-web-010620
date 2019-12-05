@@ -4,7 +4,7 @@ d = {"angel"=>["O:)", "☜(⌒▽⌒)☞"], "angry"=>[">:(", "ヽ(ｏ`皿′ｏ)
 
 def load_library(filepath)
   # returns a hash
-  # has two keys, 'get_meaning' and 'get_emoticon' (FAILED - 1)
+  # has two keys, 'get_meaning' and 'get_emoticon' 
   # the keys 'get_meaning' and 'get_emoticon' point to inner hashes 
   # the keys inside the 'get_meaning' hash are the Japanese emoticons 
   # the emoticon keys inside the 'get_meaning' hash point to their meanings 
@@ -25,10 +25,10 @@ end
 def get_japanese_emoticon(filepath, emoticon)
   #accepts two arguments, the YAML file path and the emoticon
   #calls on #load_library and gives it the argument of the file path
-  #returns the Japanese equivalent of an English grinning (FAILED - 1)
-  #returns the Japanese equivalent of an English happy (FAILED - 2)
-  #returns the Japanese equivalent of an English sad (FAILED - 3)
-  #returns an apology message if the argument is not a known emoticon (FAILED - 4)
+  #returns the Japanese equivalent of an English grinning 
+  #returns the Japanese equivalent of an English happy 
+  #returns the Japanese equivalent of an English sad 
+  #returns an apology message if the argument is not a known emoticon 
   
   emoticons_dictionary = load_library(filepath)["get_emoticon"]
 
@@ -41,11 +41,11 @@ end
 
 
 def get_english_meaning(filepath,emoticon)
-  #accepts two arguments, the YAML file path and the emoticon (FAILED - 5)
-  #calls on #load_library and gives it the argument of the file path (FAILED - 6)
-  #returns the English meaning of the Japanese emoticon (＾ｖ＾) (FAILED - 7)
-  #returns the English meaning of the Japanese emoticon (￣ー￣) (FAILED - 8)
-  #returns the English meaning of the Japanese emoticon (Ｔ▽Ｔ) (FAILED - 9)
+  #accepts two arguments, the YAML file path and the emoticon 
+  #calls on #load_library and gives it the argument of the file path 
+  #returns the English meaning of the Japanese emoticon (＾ｖ＾) 
+  #returns the English meaning of the Japanese emoticon (￣ー￣) 
+  #returns the English meaning of the Japanese emoticon (Ｔ▽Ｔ) 
   #returns an apology message if the argument is not a known emoticon 
   
   emoticons_dictionary = load_library(filepath)["get_meaning"]
