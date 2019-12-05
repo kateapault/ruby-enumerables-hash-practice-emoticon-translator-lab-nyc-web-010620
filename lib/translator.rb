@@ -40,7 +40,7 @@ def get_japanese_emoticon(filepath, emoticon)
 end
 
 
-def get_english_meaning
+def get_english_meaning(filepath,emoticon)
   #accepts two arguments, the YAML file path and the emoticon (FAILED - 5)
   #calls on #load_library and gives it the argument of the file path (FAILED - 6)
   #returns the English meaning of the Japanese emoticon (＾ｖ＾) (FAILED - 7)
@@ -48,5 +48,11 @@ def get_english_meaning
   #returns the English meaning of the Japanese emoticon (Ｔ▽Ｔ) (FAILED - 9)
   #returns an apology message if the argument is not a known emoticon 
   
-  dictionary = load_library
+  emoticons_dictionary = load_library(filepath)["get_meaning"]
+  if emoticons_dictionary.include?(emoticon)
+    return emoticons_dictionary[emoticon]
+  else
+    return "Sorry, that emoticon was not found"
+  end
+  
 end
