@@ -12,7 +12,8 @@ def load_library(filepath)
   # the emoticon keys inside the 'get_emoticon' hash point to their Japanese equivalents 
   
   dictionary = YAML.load_file(filepath)
-  meaning = dictionary.map 
+  emoticons = dictionary.map { |emotion| emotion[1] }
+  
   
 end
 
