@@ -15,7 +15,7 @@ def load_library(filepath)
   emoticons = dictionary.map { |emotion| emotion[1] }
   get_emoticon = emoticons.to_h
   
-  meanings = dictionary.map { |emotion| [emotion[0], emotion[1][1]]
+  meanings = dictionary.map { |emotion| [emotion[0], emotion[1][1]] }
   get_meaning = meanings.to_h
 
   {"get_meaning" => get_meaning, "get_emoticon" => get_emoticon}
