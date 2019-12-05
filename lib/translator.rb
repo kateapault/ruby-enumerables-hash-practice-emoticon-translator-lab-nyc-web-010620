@@ -35,7 +35,7 @@ def get_japanese_emoticon(filepath, emoticon)
   if emoticons_dictionary.include?(emoticon)
     return emoticons_dictionary[emoticon]
   else
-    return "Sorry, #{emoticon} is not a known emoticon."
+    return "Sorry, this emoticon was not found"
   end
 end
 
