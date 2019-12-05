@@ -21,6 +21,7 @@ def load_library(filepath)
   {"get_meaning" => get_meaning, "get_emoticon" => get_emoticon}
 end
 
+
 def get_japanese_emoticon(filepath, emoticon)
   #accepts two arguments, the YAML file path and the emoticon
   #calls on #load_library and gives it the argument of the file path
@@ -29,9 +30,14 @@ def get_japanese_emoticon(filepath, emoticon)
   #returns the Japanese equivalent of an English sad (FAILED - 3)
   #returns an apology message if the argument is not a known emoticon (FAILED - 4)
   
-  meanings = load_library(filepath)["get_meaning"]
-  meanings[emoticon]
+  emoticons_dictionary = load_library(filepath)["get_emoticon"]
+
+  if emoticons_dictionary.include?(emoticon)
+    return emoticons_dictionary[emoticon]
+  else
+    return "Sorry, #{emoticon} is not a known emoticon."
 end
+
 
 def get_english_meaning
   #accepts two arguments, the YAML file path and the emoticon (FAILED - 5)
