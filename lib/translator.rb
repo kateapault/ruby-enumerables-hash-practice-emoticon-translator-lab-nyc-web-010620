@@ -21,8 +21,9 @@ def load_library(filepath)
   {"get_meaning" => get_meaning, "get_emoticon" => get_emoticon}
 end
 
-def get_japanese_emoticon
-  dictionary = load_library
+def get_japanese_emoticon(filepath, emoticon)
+  meanings = load_library(filepath)["get_meaning"]
+  meanings[emoticon]
 end
 
 def get_english_meaning
